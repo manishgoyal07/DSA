@@ -10,9 +10,9 @@ int findMin(vector<int>& nums) {
             break;
         } else {                         // If start > end
             if (nums[mid] >= nums[i]) {  // Check if mid > start
-                j = mid;                 // If yes, the smallest lies in Right-Half
+                j = mid;                 // If yes, the smallest lies in Left-Half
             } else {
-                i = mid + 1;  // If No, the smallest lies in Left-Half
+                i = mid + 1;  // If No, the smallest lies in Right-Half
             }
         }
     }
