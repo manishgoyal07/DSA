@@ -4,7 +4,7 @@
 int maxArea(vector<int>& height) {
     int water = 0;
     int i = 0, j = height.size() - 1;
-    while (i < j) {
+    while (i < j) {  // Traverse the array from both left & right simultaneously
         int minheight = min(height[i], height[j]);  // Find the minimum height between the left and the right height.
         water = max(water, (j - i) * h);            // Check the max. amount of water that can be stored between the 2 towers
         while (height[i] <= minheight && i < j) {
