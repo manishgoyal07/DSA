@@ -11,7 +11,7 @@ int maxArea(vector<int>& height) {
             i++;  // Now, We'll find a tower from left with height > current height
         }
         while (height[j] <= minheight && i < j) {
-            j--;  // Siumilarly, We'll find a tower from right with height > current height
+            j--;  // Similarly, We'll find a tower from right with height > current height
         }
     }
     return water;
