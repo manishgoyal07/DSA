@@ -1,6 +1,9 @@
 // Problem:  287. Find the Duplicate Number
 /*-------------------------------------------------------------------------------------*/
 // Approach 1 : Using Fast & Slow Pointer
+#include <bits/stdc++.h>
+using namespace std;
+
 int findDuplicate(vector<int>& nums) {
     int slow = nums[0];
     int fast = nums[0];
@@ -14,6 +17,11 @@ int findDuplicate(vector<int>& nums) {
         slow = nums[slow];  // It will move 1 position in each iteration
     }
     return fast;
+}
+int main() {
+    vector<int> nums = {1, 3, 4, 2, 2, 5};
+    cout << findDuplicate(nums) << endl;
+    return 0;
 }
 // Time Complexity:  O(N)
 // Auxillary Space Complexity:  O(1)
