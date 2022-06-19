@@ -8,7 +8,7 @@ bool dfs(vector<vector<char>> &board, string &word, int index, int i, int j) {
     if (index == word.size()) {
         return true;  // If whole string is found
     } else if (i < 0 || j < 0 || i >= board.size() || j >= board[0].size() || board[i][j] != word[index]) {
-        return false;  // Base case
+        return false;  // Edge cases
     } else {
         board[i][j] = '*';                                        // Mark for visited
         bool isfound = (dfs(board, word, index + 1, i - 1, j) ||  // check Up-wards
