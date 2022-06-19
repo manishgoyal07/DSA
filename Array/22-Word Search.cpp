@@ -1,6 +1,9 @@
 // Problem:  79. Word Search
 /*-------------------------------------------------------------------------------------*/
 // Approach 1 : DFS + Recursion
+#include <bits/stdc++.h>
+using namespace std;
+
 bool dfs(vector<vector<char>> &board, string &word, int index, int i, int j) {
     if (index == word.size()) {
         return true;  // If whole string is found
@@ -30,6 +33,14 @@ bool exist(vector<vector<char>> &board, string word) {
     }
     return false;
 }
+
+int main() {
+    vector<vector<char>> board = {{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
+    string word = "ABCCED";
+    cout << exist(board, word) << endl;
+    return 0;
+}
+
 // Time Complexity:  O(m*n)
 // Auxillary Space Complexity:  O(1)
 /*-------------------------------------------------------------------------------------*/
