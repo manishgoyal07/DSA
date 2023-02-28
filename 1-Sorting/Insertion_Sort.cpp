@@ -5,18 +5,17 @@
 class Solution{
 public:
 
-void Selection_sort(vector<int> arr, int n){
-if(n<=1) return;
-for(int i=0; i<n-1; i++){
-	int idx=i;
-    for(int j=i+1; j<n; j++){
-	if(arr[j]<arr[idx]){
-	idx = j;
+void Insertion_Sort(vector<int> arr, int n){
+	if(n<=1) return;
+	for(int i=1; i<n; i++){
+		int j=i, k=j-1;
+		while(k>0 && arr[k]>arr[j]){
+				swap(arr[k],arr[j]);
+					j--; k--;
 		}
 	}
-	swap(arr[i], arr[idx]);
 }
-}
+
 };
 
 //Time Complexity:  O(N^2)

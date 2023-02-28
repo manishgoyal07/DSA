@@ -5,18 +5,16 @@
 class Solution{
 public:
 
-void Selection_sort(vector<int> arr, int n){
-if(n<=1) return;
-for(int i=0; i<n-1; i++){
-	int idx=i;
-    for(int j=i+1; j<n; j++){
-	if(arr[j]<arr[idx]){
-	idx = j;
+void Buubble_Sort(vector<int> arr, int n){
+	if(n<=1) return;
+	for(int i=0; i<n-1; i++){
+		for(int j=1; j<n-i; j++){
+			if(arr[j-1]>arr[j]) swap(arr[j-1], arr[j]);
+			else continue;
 		}
 	}
-	swap(arr[i], arr[idx]);
 }
-}
+
 };
 
 //Time Complexity:  O(N^2)
