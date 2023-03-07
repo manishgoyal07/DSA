@@ -2,6 +2,12 @@
 //-------------------------------------------------------------------------------------
 //Code :  
 
+1 1 0 0 1 2 0
+41
+lo 0
+mid 1-
+ hi 2
+
 class Solution {
 public:
    void sortColors(vector<int> &nums){
